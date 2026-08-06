@@ -1,5 +1,6 @@
 class Solution {
     public int[] findErrorNums(int[] nums) {
+        
         int dup = -1, missing = -1;
         
         for (int i = 1; i <= nums.length; i++) {

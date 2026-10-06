@@ -11,7 +11,7 @@ class Solution {
             set2.add(n);
         }
 
-        int[] array = new int[set1.size()];
+        int[] array = new int[set1.size() > set2.size() ? set2.size() : set1.size()];
         int k=0;
         for(int n : set1){
             if(set2.contains(n)){

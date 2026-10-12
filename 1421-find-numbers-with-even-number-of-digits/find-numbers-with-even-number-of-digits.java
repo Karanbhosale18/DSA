@@ -1,38 +1,12 @@
 class Solution {
     public int findNumbers(int[] nums) {
-        int count=0;
-        for(int num:nums){
-            if(even(num)){
-                count++;
+        int count = 0;
+        for(int i = 0 ; i < nums.length ; i++){
+
+            if(Integer.toString(nums[i]).length() % 2 == 0){
+                count ++;
             }
         }
         return count;
     }
-
-    boolean even(int num){
-        int no = checkDigits(num);
-        if(no %2 == 0){
-            return true;
-        }
-        return false;
-    }
-
-    int checkDigits(int num){
-
-        if(num<0){
-            num=num * (-1);
-        }
-        if(num==0){
-            return 1;
-        }
-
-        int count=0;
-    
-        while(num>0){
-            count++;
-            num=num/10;
-        }
-        return count;
-    }
-
 }

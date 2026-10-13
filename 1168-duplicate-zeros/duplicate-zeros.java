@@ -27,17 +27,17 @@ class Solution {
         } */
 
         int[] neww = nums.clone();
-        int i =0;
+        int i = 0;
         int j = 0;
 
         while(i < nums.length){
             nums[i] = neww[j];
             if(neww[j] == 0 && i+1 < nums.length){
-                i += 1;
-                nums[i] = 0;
+                nums[i+1] = 0;
+                i++;
             }
-            i += 1;
-            j += 1;
+            i++;
+            j++;
         }
     }
 }
